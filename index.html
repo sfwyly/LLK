@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+<title>连连看</title>
+<script type="text/javascript" src="js/index.js"></script>
+		<style type="text/css">
+			/*容器块*/
+			#container{
+				width: 100%;
+				margin: 0;
+				padding: 0;
+				text-align: center;
+			}
+			/*提示颜色为红色*/
+			#container span{
+				color:red;
+			}
+			/*标题*/
+			p{
+				text-align: center;
+				padding-top: 20px;
+				padding-bottom: 20px;
+				font-size: 25px;
+				margin: auto;
+			}
+			/*图片所在的8*8方格块*/
+			#block{
+				margin: auto;
+			}
+			/*图片所在方块表格*/
+			#block>table{
+				padding:1px;/*图片间距*/
+				width: 400px;
+				margin: auto;
+			}
+			#block>table div{/*每个图片方块的大小*/
+				width: 50px;
+				height: 50px;
+			}
+			#block>table div:hover{/*图片方块的鼠标活跃时事件*/
+				opacity:0.3;
+				cursor:pointer;
+			}
+			input{/*按钮的样式*/
+				width:40px;
+				height: 25px;
+				font-size: 15px;
+			}
+			input:hover{/*鼠标按钮活跃样式*/
+				cursor: pointer;
+				cursor: -ms-pointer;
+			}
+		</style>
+		<script type="text/javascript">
+		var flag,num;//flag选中的图片个数，num还剩图片个数
+		var c1,c2;//选中的图片位置
+		var grade;//分数
+		var block = new Array();//格子块
+		var img=new Array();//每张图片的组数
+		window.onload=function(){
+
+			stuffImg();
+		}
+		</script>
+	</head>
+	<body>
+		<div id="container">
+			<p>连连看</p>
+			<b>提示：</b><span></span>&nbsp;&nbsp;&nbsp;&nbsp;<b>分数：</b><span></span>
+			<br />
+			<div id="block">
+				<table>
+					<tr>
+						<td><div></div></td><td><div></div></td>
+						<td><div></div></td><td><div></div></td>
+						<td><div></div></td><td><div></div></td>
+						<td><div></div></td><td><div></div></td>
+					</tr>
+					<tr>
+						<td><div></div></td><td><div></div></td>
+						<td><div></div></td><td><div></div></td>
+						<td><div></div></td><td><div></div></td>
+						<td><div></div></td><td><div></div></td>
+					</tr>
+					<tr>
+						<td><div></div></td><td><div></div></td>
+						<td><div></div></td><td><div></div></td>
+						<td><div></div></td><td><div></div></td>
+						<td><div></div></td><td><div></div></td>
+					</tr>
+					<tr>
+						<td><div></div></td><td><div></div></td>
+						<td><div></div></td><td><div></div></td>
+						<td><div></div></td><td><div></div></td>
+						<td><div></div></td><td><div></div></td>
+					</tr>
+					<tr>
+						<td><div></div></td><td><div></div></td>
+						<td><div></div></td><td><div></div></td>
+						<td><div></div></td><td><div></div></td>
+						<td><div></div></td><td><div></div></td>
+					</tr>
+					<tr>
+						<td><div></div></td><td><div></div></td>
+						<td><div></div></td><td><div></div></td>
+						<td><div></div></td><td><div></div></td>
+						<td><div></div></td><td><div></div></td>
+					</tr>
+					<tr>
+						<td><div></div></td><td><div></div></td>
+						<td><div></div></td><td><div></div></td>
+						<td><div></div></td><td><div></div></td>
+						<td><div></div></td><td><div></div></td>
+					</tr>
+					<tr>
+						<td><div></div></td><td><div></div></td>
+						<td><div></div></td><td><div></div></td>
+						<td><div></div></td><td><div></div></td>
+						<td><div></div></td><td><div></div></td>
+					</tr>
+					
+				</table>
+				<br />
+				<input type="button" value="重置" onclick="javascript:stuffImg()" />
+			</div>
+			
+			</div>
+			
+		
+	</body>
+</html>
